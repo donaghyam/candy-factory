@@ -29,7 +29,19 @@ const bakeCandy = (candyObject) => {
     if (candyObject.mixed === true) {
         candyObject.baked = true
     } else {
-        candyObject.bakeCandy = false
+        candyObject.baked = false
     }
     return candyObject
 }
+
+const bakedChocolate = bakeCandy(mixedChocolate)
+
+const breakBark = (candyObject) => {
+    if (candyObject.baked === true) {
+        return ["Mint Chocolate Bark Piece", "Mint Chocolate Bark Piece","Mint Chocolate Bark Piece","Mint Chocolate Bark Piece","Mint Chocolate Bark Piece","Mint Chocolate Bark Piece"]
+    }
+}
+
+const candy = breakBark(bakedChocolate)
+
+console.log(candy)
